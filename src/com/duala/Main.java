@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println(linearIndx(5,2));
-//        System.out.println(inverseIndx(8).toString());
+//        System.out.println(linearIndx(5,2));
 
-        inverseIndx(17);
+        genArray(32);
+//        inverseIndx(17);
     }
 
 
@@ -40,6 +40,23 @@ public class Main {
     }
 
 
+    public static void genArray(int n){
+        int[][] array = new int[n][n];
+
+        for (int row = 0; row < n; row++){
+            for (int column = 0; column <= row; column++){
+                array[row][column] = 1;
+            }
+        }
+
+        System.out.println("array");
+        for (int row = 0; row < n; row++) {
+            System.out.print("\nrow"+ row+ " ");
+            for (int column = 0; column < n; column++) {
+                System.out.print(array[row][column]);
+            }
+        }
+    }
 
 
 
